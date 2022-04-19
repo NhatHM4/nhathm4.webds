@@ -1,0 +1,19 @@
+package com.example.webdbs.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.webdbs.entity.Employee;
+import com.example.webdbs.entity.User;
+import com.example.webdbs.respository.impl.EmpInterface;
+
+@Service
+public class EmpService {
+	
+	@Autowired
+	private EmpInterface empInterface;
+	
+	public User save(User user) {
+		return empInterface.save(user);
+	}
+}

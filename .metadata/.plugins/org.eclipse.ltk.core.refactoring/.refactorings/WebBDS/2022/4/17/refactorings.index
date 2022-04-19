@@ -1,0 +1,10 @@
+1650247714835	Rename package 'com.example.webdbs.controller'
+1650247789860	Move 'HelloJsp.jsp' to 'views'
+1650248316470	Rename package 'com.example.controller'
+1650248554066	Move 'views' to 'webapp'
+1650250233204	Delete element
+1650269429435	Move 'index.js' to 'js'
+1650271101389	Rename type 'EmpRespository'
+1650271108576	Rename type 'EmpInterface'
+1650271117042	Rename type 'EmpService'
+1650336557411	Delete element

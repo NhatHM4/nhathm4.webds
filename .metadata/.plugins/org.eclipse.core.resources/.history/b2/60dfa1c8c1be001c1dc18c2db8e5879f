@@ -1,0 +1,7 @@
+package com.example.webdbs.entity;
+
+
+public class demo {
+	String name;
+	
+}

@@ -1,0 +1,21 @@
+package com.example.webdbs.respository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.webdbs.entity.User;
+import com.example.webdbs.respository.impl.EmpInterface;
+
+
+
+@Repository
+public class UserRespository {
+	
+	@Autowired
+	private EmpInterface empIpml;
+	
+	public User save(User user) {
+		return empIpml.save(user);
+	}
+	
+}

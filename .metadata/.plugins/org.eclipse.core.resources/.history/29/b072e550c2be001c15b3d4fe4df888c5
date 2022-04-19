@@ -1,0 +1,11 @@
+package com.example.webdbs.entity;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter 
+@Setter
+public class demo {
+	String name;
+	
+}

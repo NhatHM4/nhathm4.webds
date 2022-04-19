@@ -1,0 +1,23 @@
+package com.example.webdbs.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.webdbs.entity.DuAnBDS;
+
+@Controller
+public class ThemDuAnController {
+	
+	@GetMapping("/add")
+	public String add(@ModelAttribute("duAnBDS") DuAnBDS duAnBDS) {
+		return "ThemDuAn";
+	}
+	
+	@PostMapping("/add")
+	public String addDuAn(@ModelAttribute("duAnBDS") DuAnBDS duAnBDS) {
+		System.out.println(duAnBDS);
+		return "ThemDuAn";
+	}
+}

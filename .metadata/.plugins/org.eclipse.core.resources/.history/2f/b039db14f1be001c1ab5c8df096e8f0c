@@ -1,0 +1,30 @@
+package com.example.webdbs.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.webdbs.entity.User;
+import com.example.webdbs.service.EmpService;
+
+
+
+@Controller
+public class HelloController {
+
+	@Autowired
+	private EmpService empService;
+	
+	@RequestMapping(value = {"/"})
+	public String hello(@ModelAttribute("employee") User user){
+		
+		return "HelloJsp";
+	}
+	
+	@RequestMapping("/hello")
+	public String addemp(@ModelAttribute("employee") User user) {
+		empService.save(user);
+		return "redirect:/";
+	}
+}

@@ -1,0 +1,9 @@
+package com.example.webdbs.respository.impl;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.webdbs.entity.Employee;
+
+public interface EmpInterface extends JpaRepository<Employee, Integer>{
+
+}
