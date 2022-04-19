@@ -41,7 +41,7 @@ public class ThemDuAnController {
 		log.info("upload file {} ", upload.get("secure_url"));
 		duAnBDS.setLinkImage((String)upload.get("secure_url"));
 		duAnService.save(duAnBDS);
-		return "ThemDuAn";
+		return "List";
 	}
 	
 	 private File convertMultiPartToFile(MultipartFile file ) throws IOException

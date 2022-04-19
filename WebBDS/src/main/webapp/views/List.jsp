@@ -26,7 +26,7 @@
           <table class="table manage-candidates-top mb-0">
             <thead>
               <tr>
-                <th>Tên dự Án</th>
+                <th>Tên dự án</th>
                 <th class="text-center">Trạng thái</th>
                 <th class="action text-right">Action</th>
               </tr>
@@ -40,7 +40,7 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="<c:url value="/js/listJS.js" />">
+<script type="text/javascript" src="<c:url value="/js/listJS1.js" />">
 
 </script>
 </body>

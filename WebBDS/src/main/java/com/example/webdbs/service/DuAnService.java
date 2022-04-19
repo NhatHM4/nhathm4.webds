@@ -21,4 +21,8 @@ public class DuAnService {
 	public List<DuAnBDS> findAll(){
 		return duAnRepository.findAll();
 	}
+	
+	public DuAnBDS getById(Integer id) {
+		return duAnRepository.getById(id);
+	}
 }

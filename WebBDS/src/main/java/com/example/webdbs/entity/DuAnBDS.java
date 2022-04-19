@@ -41,4 +41,7 @@ public class DuAnBDS {
 	
 	@Transient
 	private MultipartFile file;
+	
+	@Column
+	private boolean flagDelete = false;
 }

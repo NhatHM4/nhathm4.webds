@@ -9,8 +9,22 @@ $( document ).ready(function() {
       };
       
       $.ajax(settings).done(function (response) {
-	console.log(response)
+	      console.log(response)
         showData(response)
+        $( "tbody" ).on( "click", "#delete", function() {
+          var answer = window.confirm("Bạn có muốn xóa không?");
+          if (answer){
+            $.ajax({
+              method: "POST",
+              url: "http://localhost:8080/WebBDS/delete",
+              data: { id : parseInt($(this).attr("delete")) }
+            })
+              .done(function( msg ) {
+                showData(msg)
+              });
+          }
+          
+        });
       });
 
 
@@ -25,7 +39,7 @@ $( document ).ready(function() {
                 <div class="candidate-list-details">
                   <div class="candidate-list-info">
                     <div class="candidate-list-title">
-                      <h5 class="mb-0"><a href="#">${arrObj[i].tenDuAn}</a></h5>
+                      <h5 class="mb-0"><a href="http://localhost:8080/WebBDS/edit/${arrObj[i].id}">${arrObj[i].tenDuAn}</a></h5>
                     </div>
                     <div class="candidate-list-option">
                       <ul class="list-unstyled">
@@ -42,8 +56,8 @@ $( document ).ready(function() {
               </td>
               <td>
                 <ul class="list-unstyled mb-0 d-flex justify-content-end">
-                  <li><a href="#" class="text-info" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a></li>
-                  <li><a href="#" class="text-danger" data-toggle="tooltip" title="" data-original-title="Delete"><i class="far fa-trash-alt"></i></a></li>
+                  <li><a href="http://localhost:8080/WebBDS/edit/${arrObj[i].id}" class="text-info" data-toggle="tooltip" title="" data-original-title="Edit"><i class="fas fa-pencil-alt"></i></a></li>
+                  <li><a href="#" id = "delete" class="text-danger" data-toggle="tooltip" title="" data-original-title="Delete" delete ="${arrObj[i].id}"><i class="far fa-trash-alt"></i></a></li>
                 </ul>
               </td>
             </tr>`
@@ -51,4 +65,6 @@ $( document ).ready(function() {
             $('tbody').append(content);
           }
       }
+
+      
 });

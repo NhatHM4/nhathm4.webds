@@ -1,0 +1,27 @@
+package com.example.webdbs.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.webdbs.entity.DuAnBDS;
+import com.example.webdbs.service.DuAnService;
+
+@Controller
+public class EditDuAnController {
+
+	@Autowired
+	DuAnService anService;
+	
+	@GetMapping("/edit/{id}")
+	public String edit(@PathVariable("id") Integer id,Model model) {
+		DuAnBDS duAnBDS = anService.getById(id);
+		model.addAttribute("duAnBDS", duAnBDS);
+		return "EditDuAn";
+		
+	}
+	
+	
+}

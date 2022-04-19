@@ -19,6 +19,10 @@ public class DuAnRepository {
 	}
 	
 	public List<DuAnBDS> findAll(){
-		return duAnImpl.findAll();
+		return duAnImpl.findByFlagDelete();
+	}
+	
+	public DuAnBDS getById(Integer id) {
+		return duAnImpl.getById(id);
 	}
 }
