@@ -29,7 +29,7 @@ public class ThemDuAnController {
 	
 	@GetMapping("/add")
 	public String add(@ModelAttribute("duAnBDS") DuAnBDS duAnBDS) {
-		return "ThemDuAn";
+		return "AddProject";
 	}
 
 	@PostMapping("/add")
@@ -41,7 +41,7 @@ public class ThemDuAnController {
 		log.info("upload file {} ", upload.get("secure_url"));
 		duAnBDS.setLinkImage((String)upload.get("secure_url"));
 		duAnService.save(duAnBDS);
-		return "List";
+		return "ShowListProject";
 	}
 	
 	 private File convertMultiPartToFile(MultipartFile file ) throws IOException
@@ -55,6 +55,6 @@ public class ThemDuAnController {
 	 
 	 @GetMapping("/showlist")
 	 public String showList() {
-		 return "List";
+		 return "ShowListProject";
 	 }
 }

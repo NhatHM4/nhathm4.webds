@@ -23,10 +23,10 @@ public class HelloController {
 	@RequestMapping(value = { "/" }, method = RequestMethod.GET)
 	public String hello(@ModelAttribute("user") User user) {
 
-		return "HelloJsp";
+		return "Login";
 	}
 
-	@PostMapping("/hello")
+	@PostMapping("/login")
 	public String addemp(@ModelAttribute("user") User user, Model model) {
 		List<User> listUser = new ArrayList<User>();
 		listUser = userService.checkLogin(user);
@@ -34,7 +34,7 @@ public class HelloController {
 			return "redirect:https://github.com/";
 		}
 		model.addAttribute("message", "Sai tài khoản hoặc mật khẩu");
-		return "HelloJsp";
+		return "Login";
 
 	}
 }

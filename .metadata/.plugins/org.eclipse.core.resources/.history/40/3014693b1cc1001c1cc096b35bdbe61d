@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{base.html}">
+<head>
+<meta charset="UTF-8">
+<title>Edit Project</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container py-5">
+		<h4 class="text-uppercase text-center">HTML 5 form inputs in
+			bootstrap 4</h4>
+		<div class="card">
+			<div class="card-header bg-danger text-white">
+				<h4 class="text-uppercase text-center">HTML 5 from inputs</h4>
+			</div>
+			<div class="card-body">
+				<form method="post"
+					th:action="@{/editduAn}"
+					th:object = "${duAnBDS}" enctype="multipart/form-data">
+					
+					<div class="form-row">
+						<div class="col-md-12">
+						<input class="form-control" name = "Id" th:value="*{Id}" />
+							<label>Tên Dự Án</label>
+							<input type="text" class="form-control" name = "tenDuAn" th:value="*{tenDuAn}"/>
+						</div>
+						<div class="col-md-12 pt-2">
+							<label>Mô tả</label>
+							<textarea rows="5" cols="30" name="moTa"
+								class="form-control" th:field="${duAnBDS.moTa}" ></textarea>
+						</div>
+					</div>
+					<div class = "row">
+					<div class="col-md-5 pt-2">
+						File to upload:
+						<input type="file" name="file"/>
+					</div>
+					
+					<div class="col-md-6 pt-2">
+						<img th:src="*{linkImage }" class="img-thumbnail" alt="Responsive image" style = "height: 200px; width: 200px">
+						
+					</div></div>
+					
+					<div style="margin-top: 15px;">
+						<button type="submit" class="btn btn-primary rounded-0">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

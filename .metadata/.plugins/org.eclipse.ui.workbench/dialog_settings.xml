@@ -6,4 +6,9 @@
 			<item value="org.springsource.ide.eclipse.boot.wizards.category"/>
 		</list>
 	</section>
+	<section name="EditorSelectionDialog">
+		<item key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION" value=".js"/>
+		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="true"/>
+		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="C:\Users\MINHNHAT\AppData\Local\Programs\Microsoft VS Code\Code.exe"/>
+	</section>
 </section>

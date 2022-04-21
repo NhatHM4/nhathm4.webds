@@ -29,7 +29,7 @@ public class EditDuAnController {
 	public String edit(@PathVariable("id") Integer id,Model model) {
 		DuAnBDS duAnBDS = anService.getById(id);
 		model.addAttribute("duAnBDS", duAnBDS);
-		return "EditDuAn";
+		return "EditProject";
 		
 	}
 	
@@ -41,7 +41,7 @@ public class EditDuAnController {
 		Map upload = cloudinary.uploader().upload(convertMultiPartToFile(duAnBDS.getFile()), asMap);
 		duAnBDS.setLinkImage((String)upload.get("secure_url"));
 		anService.save(duAnBDS);
-		return "List";
+		return "ShowListProject";
 	}
 	
 	private File convertMultiPartToFile(MultipartFile file ) throws IOException

@@ -1,0 +1,11 @@
+spring.mvc.view.prefix = /views/
+spring.thymeleaf.prefix=classpath:/views/
+#spring.mvc.view.suffix = .jsp
+
+spring.datasource.url=jdbc:sqlserver://localhost;databaseName=testBDS
+spring.datasource.username=nhat1
+spring.datasource.password=12345
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.show-sql=true
+spring.jpa.hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect
+spring.jpa.hibernate.ddl-auto = none

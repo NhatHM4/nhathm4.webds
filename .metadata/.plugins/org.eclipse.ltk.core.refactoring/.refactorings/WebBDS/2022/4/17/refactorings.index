@@ -9,3 +9,9 @@
 1650271117042	Rename type 'EmpService'
 1650336557411	Delete element
 1650355596418	Rename resource 'listJS.js'
+1650467865121	Move 'NewFile.html' to 'templates'
+1650468322915	Move 'NewFile.html' to 'views'
+1650505614731	Rename resource 'NewFile.html'
+1650505813840	Delete element
+1650506930296	Delete element
+1650507053124	Delete element

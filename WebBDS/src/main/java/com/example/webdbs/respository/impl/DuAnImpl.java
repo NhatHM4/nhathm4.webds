@@ -11,6 +11,6 @@ import com.example.webdbs.entity.DuAnBDS;
 @Repository
 public interface DuAnImpl extends JpaRepository<DuAnBDS, Integer>{
 	
-	@Query("SELECT e FROM DuAnBDS e WHERE e.flagDelete = 'False'")
+	@Query("SELECT e FROM DuAnBDS e WHERE e.flagDelete = 0")
 	List<DuAnBDS> findByFlagDelete();
 }
