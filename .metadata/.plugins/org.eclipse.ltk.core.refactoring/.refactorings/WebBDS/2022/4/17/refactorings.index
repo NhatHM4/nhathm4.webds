@@ -15,3 +15,8 @@
 1650505813840	Delete element
 1650506930296	Delete element
 1650507053124	Delete element
+1650524066788	Rename type 'DuAnImpl'
+1650524101405	Rename type 'DuAnRespository'
+1650524139319	Rename type 'UserInterface'
+1650524277291	Delete elements
+1650524337114	Rename package 'com.example.webdbs.respository.impl'

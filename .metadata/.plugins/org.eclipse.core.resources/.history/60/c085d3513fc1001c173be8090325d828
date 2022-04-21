@@ -1,0 +1,11 @@
+package com.example.webdbs.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.example.webdbs.entity.DuAnBDS;
+
+@Service
+public interface DuAnServiceImpl {
+	
+	public DuAnBDS save(DuAnBDS duAnBDS);
+}

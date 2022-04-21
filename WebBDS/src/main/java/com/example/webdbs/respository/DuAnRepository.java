@@ -2,27 +2,15 @@ package com.example.webdbs.respository;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.example.webdbs.entity.DuAnBDS;
-import com.example.webdbs.respository.impl.DuAnImpl;
 
 @Repository
-public class DuAnRepository {
-
-	@Autowired
-	private DuAnImpl duAnImpl;
+public interface DuAnRepository extends JpaRepository<DuAnBDS, Integer>{
 	
-	public DuAnBDS save(DuAnBDS duAnBDS) {
-		return duAnImpl.save(duAnBDS);
-	}
-	
-	public List<DuAnBDS> findAll(){
-		return duAnImpl.findByFlagDelete();
-	}
-	
-	public DuAnBDS getById(Integer id) {
-		return duAnImpl.getById(id);
-	}
+	@Query("SELECT e FROM DuAnBDS e WHERE e.flagDelete = 0")
+	List<DuAnBDS> findByFlagDelete();
 }

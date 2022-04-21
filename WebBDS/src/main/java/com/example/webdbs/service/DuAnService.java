@@ -7,12 +7,15 @@ import org.springframework.stereotype.Service;
 
 import com.example.webdbs.entity.DuAnBDS;
 import com.example.webdbs.respository.DuAnRepository;
+import com.example.webdbs.service.impl.DuAnServiceImpl;
+
+
 
 @Service
-public class DuAnService {
+public class DuAnService implements DuAnServiceImpl {
 
 	@Autowired
-	private DuAnRepository duAnRepository;
+	private DuAnRepository duAnRepository ;
 	
 	public DuAnBDS save(DuAnBDS duAnBDS) {
 		return duAnRepository.save(duAnBDS);

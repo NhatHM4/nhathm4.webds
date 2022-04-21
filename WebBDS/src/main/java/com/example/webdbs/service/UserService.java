@@ -6,20 +6,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.webdbs.entity.User;
-import com.example.webdbs.respository.UserRespository;
-import com.example.webdbs.respository.impl.UserInterface;
+import com.example.webdbs.respository.UserRepository;
+import com.example.webdbs.service.impl.UserServiceImpl;
 
 @Service
-public class UserService {
+public class UserService implements UserServiceImpl {
 	
 	@Autowired
-	private UserRespository userInterface;
+	private UserRepository userRepository;
 	
 	public User save(User user) {
-		return userInterface.save(user);
+		return userRepository.save(user);
 	}
 	
 	public List<User> checkLogin(User user){
-		return userInterface.checkLogin(user);
+		return userRepository.findByNameAndPassword(user.getName(),user.getPassword());
 	}
 }
