@@ -27,7 +27,8 @@
 					
 					<div class="form-row">
 						<div class="col-md-12">
-						<input class="form-control" name = "Id" th:value="*{Id}" />
+						<input type="hidden" class="form-control" name = "Id" th:value="*{Id}" />
+						<input type="hidden" class="form-control" name = "linkImage" th:value="*{linkImage}" />
 							<label>Tên Dự Án</label>
 							<input type="text" class="form-control" name = "tenDuAn" th:value="*{tenDuAn}"/>
 						</div>

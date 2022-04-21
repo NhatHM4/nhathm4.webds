@@ -34,12 +34,15 @@ public class ThemDuAnController {
 
 	@PostMapping("/add")
 	public String addDuAn(@ModelAttribute("duAnBDS") DuAnBDS duAnBDS) throws IOException {
-		Map asMap = ObjectUtils.asMap("cloud_name", "haminhnhat711", "api_key", "414128439647965", "api_secret",
-				"weG0sfQ2m6mxoYuL56aiCKAOIXs", "secure", true);
-		Cloudinary cloudinary = new Cloudinary(asMap);
-		Map upload = cloudinary.uploader().upload(convertMultiPartToFile(duAnBDS.getFile()), asMap);
-		log.info("upload file {} ", upload.get("secure_url"));
-		duAnBDS.setLinkImage((String)upload.get("secure_url"));
+		if(duAnBDS.getFile().getSize()!=0) {
+			Map asMap = ObjectUtils.asMap("cloud_name", "haminhnhat711", "api_key", "414128439647965", "api_secret",
+					"weG0sfQ2m6mxoYuL56aiCKAOIXs", "secure", true);
+			Cloudinary cloudinary = new Cloudinary(asMap);
+			Map upload = cloudinary.uploader().upload(convertMultiPartToFile(duAnBDS.getFile()), asMap);
+			log.info("upload file {} ", upload.get("secure_url"));
+			duAnBDS.setLinkImage((String)upload.get("secure_url"));
+		}
+		
 		duAnService.save(duAnBDS);
 		return "ShowListProject";
 	}
