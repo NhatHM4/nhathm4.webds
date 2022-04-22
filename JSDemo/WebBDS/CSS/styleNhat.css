@@ -1,0 +1,82 @@
+.recruit{
+    background-color: rgb(46, 46, 46);
+    height: 100%;
+}
+.bar1{
+    color: white;
+}
+ a:link{
+    text-decoration: none;
+    /* color: white; */
+}
+.text-employee{
+    color: rgb(255, 194, 14);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.8rem;
+    text-align: right;
+}
+.text-job{
+    font-weight: 500;
+    text-align: right;
+    color: rgb(227, 240, 252);
+}
+.text-content{
+    font-weight: 200;
+    text-align: right;
+    color: rgb(227, 240, 252);
+}
+.link-detail{
+    color: rgb(255, 194, 14);
+    text-align: right;
+    display: block;
+    font-size: x-large;
+}
+.text-employee-candidate{
+    color: rgb(255, 194, 14);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+    /* background-color: aquamarine; */
+    line-height: 1.5;
+    border-radius: 50%;
+    padding: 2rem;
+    border: 0.5px  double rgb(255, 194, 14,0.4);
+    margin-bottom: 0.5rem;
+}
+.line{
+    height:3px;
+    width: 100%;
+    background-color: rgb(255, 194, 14);
+}
+.gray{
+    width: 90%;
+    background-color: gray;
+    margin-left: 1rem;
+    margin-bottom: 0.3rem;
+}
+.marina{
+    padding: 1.5rem 0;
+    font-size: 5rem;
+    font-weight: 500;
+}
+.blur-img{
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+.marina-complex{
+    top: 50%;
+    left: 70%;
+    position: absolute;
+    width: 125%;
+    height: 10rem;
+    background-color: rgb(250, 249, 245);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-marina{
+    font-size: large;
+    background-color: white;
+    padding: 5px;
+    font-weight: 300;
+}

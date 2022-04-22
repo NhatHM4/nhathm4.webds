@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="com.example.webdbs.respository.impl.EmpInterface"/>
     <fullyQualifiedTypeName name="com.example.webdbs.entity.Employee"/>
     <fullyQualifiedTypeName name="com.example.webdbs.service.EmpService"/>
@@ -41,4 +40,11 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="com.example.webdbs.entity.DuAnBDS"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="com.example.webdbs.service.impl.UserServiceImpl"/>
+    <fullyQualifiedTypeName name="com.example.webdbs.respository.impl.DuAnImpl"/>
+    <fullyQualifiedTypeName name="com.example.webdbs.respository.impl.DuAnRespository"/>
+    <fullyQualifiedTypeName name="com.example.webdbs.respository.impl.UserRepository"/>
+    <fullyQualifiedTypeName name="com.example.webdbs.respository.impl.DuAnRepository"/>
+    <fullyQualifiedTypeName name="com.example.webdbs.service.impl.DuAnServiceImpl"/>
 </qualifiedTypeNameHistroy>
